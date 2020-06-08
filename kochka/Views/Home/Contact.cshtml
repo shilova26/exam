@@ -1,0 +1,32 @@
+﻿@{ViewBag.Title = "Вход";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+</head>
+<div>
+    <h3>Авторизируйтесь, чтобы войти в систему</h3>
+    <h4>Вход</h4>
+    <form method="post" action="">
+        <input type="hidden" value="@ViewBag.Contact" name="Contact" />
+        </form>
+        <table>
+
+            <tr>
+                <td><p>Введите логин </p></td>
+                <td><input type="text" name="Login" /> </td>
+            </tr>
+            <tr>
+                <td><p>Введите пароль</p></td>
+                <td>
+                    <input type="text" name="Password" />
+                </td>
+            </tr>
+            
+        </table>
+        <input value="Вход" type="button" onclick="location.href='https://localhost:44386/Home/Customers'">
+
+
+</div>
+

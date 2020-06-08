@@ -1,0 +1,26 @@
+﻿@model IEnumerable<kochka.Models.Purchase>
+@{
+    ViewBag.Title = "Клиенты";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <h3>Клиенты</h3>
+    <table>
+        <tr>
+            <td><p>Номер покупки</p></td>
+            <td><p> Клиент </p></td>
+            <td><p> Эл. почта </p></td>
+            <td><p> Дата покупки </p></td>
+            <td><p></p></td>
+        </tr>
+        @foreach (kochka.Models.Purchase b in Model)
+        {
+    <tr>
+        <td><p>@b.PurchaseId</p></td>
+        <td><p>@b.Person</p></td>
+        <td><p>@b.Eaddress</p></td>
+        <td><p>@b.Date</p></td>
+   
+
+    </tr>
+        }
+    </table>

@@ -1,0 +1,29 @@
+﻿@model IEnumerable<kochka.Models.Ticket>
+@{
+    ViewBag.Title = "Абонементы";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+</head>
+<div>
+    <h3>Абонементы</h3>
+    <table>
+        <tr>
+            <td><p>Описание абонемента</p></td>
+            <td><p> Цена </p></td>
+            <td><p></p></td>
+
+        </tr>
+        @foreach (kochka.Models.Ticket b in Model)
+        {
+            <tr>
+                <td><p>@b.Name</p></td>
+                <td><p>@b.Price</p></td>
+                <td><p><a href="/Home/Buy/@b.Id"> Купить</a></p></td>
+
+            </tr>
+        }
+    </table>
+</div>

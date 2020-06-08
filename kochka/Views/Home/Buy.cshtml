@@ -1,0 +1,39 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link type="text/css" rel="stylesheet" href="../../Content/Site.css" />
+    <title>Покупка</title>
+</head>
+<body>
+    <div>
+        <h3>Форма оформления покупки</h3>
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.TicketId" name="TicketId" />
+            <table>
+                <tr>
+                    <td><p>Введите свое ФИО </p></td>
+                    <td><input type="text" name="Person" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Введите адрес эл. почты :</p></td>
+                    <td>
+                        <input type="text" name="Eaddress" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><p>Введите карту</p></td>
+                    <td>
+                        <input type="text" name="Card" />
+                    </td>
+                </tr>
+                <tr><td><input type="submit" value="Отправить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
